@@ -24,17 +24,15 @@ Installation and Usage
 - Go to Reply setting on OA manager, enable "webhook"
 
 
-### 2. Just Deploy this on Heroku
+### 2. Just Deploy this on Render
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+[![Deploy to Render](http://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy)
 
-- Input `Channel Secret` and `Channel Access Token`.
-- Remember your heroku, ID.
+You will be prompted to input LINE channel secret and [access token](https://developers.line.biz/en/docs/messaging-api/channel-access-tokens/). You can find them on the [LINE Developers Console](https://developers.line.biz/console/). Channel secret is on the channel's `Basic settings` tab. Channel access token is on the channel's `Messaging API` tab.
 
 ### 3. Go to LINE Bot Dashboard, setup basic API
 
-- Setup your basic account information. Here is some info you will need to know.
-- `Callback URL`: https://{YOUR_HEROKU_SERVER_ID}.herokuapp.com/callback
+Once the bot servcie is live, find the service `onrender` URL (e.g., `https://linebottemplateo-<something unique>.onrender.com`) on the Render Dashboard. Append `/callback` to the service URL to build the webhook URL (e.g., `https://linebottemplate-<something unique>.onrender.com/callback`). Paste the webhook URL to the `Webhook settings` section on the LINE channel's `Messaging API` tab on the [LINE Developers Console](https://developers.line.biz/console/). Also enable `Use webhook` on the same section.
 
 It all done.
 
